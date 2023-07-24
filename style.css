@@ -1,0 +1,136 @@
+    @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap');
+body{
+    font-family: 'Space Mono', monospace;
+}
+.errorFound{
+    font-family: 'Inconsolata';
+font-size: 24px;
+font-weight: 700;
+line-height: 25px;
+letter-spacing: -0.08em;
+text-align: left;
+margin: 0;
+}
+header{
+    margin: 0 0 0 100px;
+}
+.all{
+    width: 1440px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.allSon{
+   display: flex;
+   align-items: center;
+   height: 94vh;
+}
+.title{
+    margin: 0;
+}
+.para{
+    width: 263px;
+    height: 100px;
+    margin: 20px 0 20px 0;
+}
+h1{
+font-family: 'Space Mono';
+font-size: 64px;
+font-weight: 700;
+line-height: 95px;
+letter-spacing: -0.035em;
+padding: 0 50px 0 0;
+
+}
+.imgAll{
+Width:539.22px;
+height:447.43px;
+}
+.imgAllsecond{
+    margin-left: 100px;
+}
+.allComponents{
+    margin-left: 100px;
+
+}
+.btn{
+width: 216px;
+height: 68px;
+top: 663px;
+left: 740px;
+background: #333333;
+color:white;
+font-family: 'Space Mono';
+font-weight: 700;
+line-height: 21px;
+letter-spacing: -0.035em;
+cursor: pointer;
+}
+.btn:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.references{
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    font-family: 'Space Mono';
+}
+@media screen and (max-width: 376px) {
+    header{
+        margin-left: 10px;
+        margin-top: 15px;
+    }
+    .allSon{
+        display: flex;
+        flex-direction: column;
+    }
+    .imgAll{
+        width: 286.829833984375px;
+        height: 238.00001525878906px;
+        
+    }
+    .imgAllsecond{
+        margin: 0 90px 0 0;
+    }
+    .allComponents{
+        margin: 0;
+    }
+     h1{
+    width: 370px;
+    height: 142px;
+    font-size: 48px;
+    margin:0 0 0 8px;
+    line-height: 70px;
+    text-align: left;
+
+    }
+      p{
+    width: 328px;
+    height: 81px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    margin: 0 0 0 8px;
+
+     }
+     .btn{
+        margin: 25px 0 0 8px;
+     }
+     footer{
+        position: absolute;
+        top: 900px;
+        left: 30px;
+        
+     }
+     a{
+        font-family: 'Space Mono';
+     }
+   
+}
