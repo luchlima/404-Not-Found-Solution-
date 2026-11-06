@@ -1,0 +1,29 @@
+{
+  "name": "explainer-3d-desmontando",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Esqueleto Remotion + Three.js no estilo Desmontando o Mundo",
+  "scripts": {
+    "start": "remotion studio",
+    "studio": "remotion studio",
+    "build": "remotion bundle",
+    "render": "remotion render GeladeiraExplainer out/geladeira.mp4 --gl=angle",
+    "still": "remotion still GeladeiraExplainer out/preview.png --frame=90 --gl=angle",
+    "stills": "node scripts/export-stills.mjs"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.340",
+    "@remotion/media-utils": "4.0.340",
+    "@remotion/three": "4.0.340",
+    "@react-three/fiber": "8.17.10",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.340",
+    "three": "0.170.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "@types/three": "0.170.0",
+    "typescript": "5.7.2"
+  }
+}

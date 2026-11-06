@@ -1,3 +1,13 @@
+## Explainer 3D (estilo Desmontando o Mundo)
+
+Novo projeto em [`explainer-3d/`](./explainer-3d): roteiro + plano de cenas + esqueleto **Remotion + Three.js** do vídeo *A geladeira não fabrica frio*.
+
+```bash
+cd explainer-3d && npm install && npm run studio
+```
+
+---
+
 <!-- Please update value in the {}  -->
 
 <h1 align="center">{Your project name}</h1>
