@@ -7,6 +7,7 @@ import { FridgeScene } from "./scenes/FridgeScene";
 /**
  * Composição principal no estilo Desmontando o Mundo.
  * Narração: public/narracao.mp3 (gTTS, sincronizada com BEATS).
+ * Após o render, rode `npm run mux-audio` para garantir áudio no MP4.
  */
 export const GeladeiraExplainer: React.FC = () => {
   return (
@@ -15,7 +16,7 @@ export const GeladeiraExplainer: React.FC = () => {
         <FridgeScene />
       </Sequence>
 
-      <Audio src={staticFile("narracao.mp3")} />
+      <Audio src={staticFile("narracao.mp3")} volume={1} />
 
       <BrandBar />
       <Caption />

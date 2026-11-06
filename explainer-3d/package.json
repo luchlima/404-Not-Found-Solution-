@@ -7,7 +7,8 @@
     "start": "remotion studio",
     "studio": "remotion studio",
     "build": "remotion bundle",
-    "render": "remotion render GeladeiraExplainer out/geladeira.mp4 --gl=angle",
+    "render": "remotion render GeladeiraExplainer out/geladeira.mp4 --gl=angle && npm run mux-audio",
+    "mux-audio": "bash scripts/mux-audio.sh",
     "still": "remotion still GeladeiraExplainer out/preview.png --frame=90 --gl=angle",
     "stills": "node scripts/export-stills.mjs"
   },
