@@ -16,7 +16,7 @@ export const GeladeiraExplainer: React.FC = () => {
         <FridgeScene />
       </Sequence>
 
-      <Audio src={staticFile("narracao.mp3")} volume={1} />
+      <Audio src={staticFile("narracao.mp3")} volume={1} startFrom={0} />
 
       <BrandBar />
       <Caption />

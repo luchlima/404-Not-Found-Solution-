@@ -11,17 +11,17 @@ const CameraRig: React.FC = () => {
 
   const camZ = interpolate(
     frame,
-    [0, 241, 400, 619, 859, 1387],
+    [0, 221, 383, 557, 735, 1155],
     [5.4, 4.8, 4.4, 4.0, 5.0, 5.5],
     { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
   );
-  const camY = interpolate(frame, [0, 619, 1145], [0.25, 0.1, 0.05], {
+  const camY = interpolate(frame, [0, 557, 939], [0.25, 0.1, 0.05], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
   const camX = interpolate(
     frame,
-    [0, 241, 619, 750, 1145],
+    [0, 221, 557, 650, 939],
     [0, 0.35, 0.5, -1.35, -0.55],
     { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
   );

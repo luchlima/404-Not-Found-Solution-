@@ -1,12 +1,12 @@
 /**
- * Roteiro + timing sincronizado com public/narracao.mp3
+ * Roteiro + timing sincronizado com public/narracao.mp3 (Edge TTS pt-BR-AntonioNeural)
  * FPS = 30. Cada bloco = uma batida visual (1 frase ≈ 1 cena).
  */
 
 export const FPS = 30;
 export const WIDTH = 1080;
 export const HEIGHT = 1920;
-export const DURATION_IN_FRAMES = 1605; // ~53.5s (áudio ~48s + cauda)
+export const DURATION_IN_FRAMES = 1338; // ~44.6s
 
 export type Beat = {
   id: string;
@@ -21,56 +21,56 @@ export const BEATS: Beat[] = [
     id: "hook",
     text: "A geladeira fabrica frio?",
     startFrame: 0,
-    endFrame: 89,
+    endFrame: 90,
     visual: "hook",
   },
   {
     id: "myth",
     text: "Essa explicação parece certa… mas não é.",
-    startFrame: 89,
-    endFrame: 241,
+    startFrame: 90,
+    endFrame: 221,
     visual: "hook",
   },
   {
     id: "cutaway",
     text: "Ela não cria frio. Ela remove calor de dentro.",
-    startFrame: 241,
-    endFrame: 400,
+    startFrame: 221,
+    endFrame: 383,
     visual: "cutaway",
   },
   {
     id: "heat-out",
     text: "Um gás especial circula pelos tubos e absorve o calor dos alimentos.",
-    startFrame: 400,
-    endFrame: 619,
+    startFrame: 383,
+    endFrame: 557,
     visual: "heat-out",
   },
   {
     id: "coils",
     text: "Depois, esse calor é jogado para fora — nas serpentinas da traseira.",
-    startFrame: 619,
-    endFrame: 859,
+    startFrame: 557,
+    endFrame: 735,
     visual: "coils",
   },
   {
     id: "cycle",
     text: "Compressor, evaporador, condensador: um ciclo contínuo de troca de calor.",
-    startFrame: 859,
-    endFrame: 1145,
+    startFrame: 735,
+    endFrame: 939,
     visual: "cycle",
   },
   {
     id: "close",
     text: "Por isso a parte de trás esquenta. A geladeira move calor — não inventa frio.",
-    startFrame: 1145,
-    endFrame: 1387,
+    startFrame: 939,
+    endFrame: 1155,
     visual: "close",
   },
   {
     id: "brand",
     text: "Desmontando o estilo: como as coisas funcionam por dentro.",
-    startFrame: 1387,
-    endFrame: 1560,
+    startFrame: 1155,
+    endFrame: 1293,
     visual: "close",
   },
 ];
