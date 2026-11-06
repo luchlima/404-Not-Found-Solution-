@@ -6,4 +6,8 @@ dist/
 .remotion/
 public/tts_parts/
 public/narracao.wav
+public/series/**/ep*_parts/
+public/series/**/*.wav
+*.raw.mp4
+
 

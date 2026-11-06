@@ -1,30 +1,21 @@
 #!/usr/bin/env bash
-# Remuxa o vídeo Remotion com a narração, reencodando áudio AAC 48 kHz.
+# Remuxa vídeo + narração com reencode H.264/AAC (players compatíveis).
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-IN="${1:-$ROOT/out/geladeira.raw.mp4}"
-NARR_WAV="$ROOT/public/narracao.wav"
-NARR_MP3="$ROOT/public/narracao.mp3"
-OUT="$ROOT/out/geladeira.mp4"
-TMP="$ROOT/out/geladeira.mux.tmp.mp4"
+IN="${1:-}"
+NARR="${2:-}"
+OUT="${3:-}"
 
-if [[ ! -f "$IN" ]]; then
-  # fallback: se o render já gravou em geladeira.mp4
-  IN="$ROOT/out/geladeira.mp4"
-fi
-if [[ ! -f "$IN" ]]; then
-  echo "Vídeo não encontrado" >&2
+if [[ -z "$IN" || -z "$NARR" || -z "$OUT" ]]; then
+  echo "Uso: mux-audio.sh <video.mp4> <narracao.mp3|wav> <saida.mp4>" >&2
   exit 1
 fi
+if [[ ! -f "$IN" ]]; then echo "Vídeo não encontrado: $IN" >&2; exit 1; fi
+if [[ ! -f "$NARR" ]]; then echo "Narração não encontrada: $NARR" >&2; exit 1; fi
 
-NARR="$NARR_WAV"
-[[ -f "$NARR" ]] || NARR="$NARR_MP3"
-if [[ ! -f "$NARR" ]]; then
-  echo "Narração não encontrada (wav/mp3)" >&2
-  exit 1
-fi
+TMP="${OUT}.tmp.mp4"
+mkdir -p "$(dirname "$OUT")"
 
-# Reencode completo (vídeo+áudio) para máxima compatibilidade de players
 ffmpeg -y -i "$IN" -i "$NARR" \
   -filter_complex "[1:a]loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000,aformat=channel_layouts=stereo[a]" \
   -map 0:v:0 -map "[a]" \

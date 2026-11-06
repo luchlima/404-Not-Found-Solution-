@@ -7,9 +7,10 @@
     "start": "remotion studio",
     "studio": "remotion studio",
     "build": "remotion bundle",
-    "render": "remotion render GeladeiraExplainer out/geladeira.raw.mp4 --gl=angle && npm run mux-audio",
-    "mux-audio": "bash scripts/mux-audio.sh out/geladeira.raw.mp4",
+    "render": "remotion render GeladeiraExplainer out/geladeira.raw.mp4 --gl=angle && bash scripts/mux-audio.sh out/geladeira.raw.mp4 public/narracao.mp3 out/geladeira.mp4",
+    "render:zumbi-01": "remotion render ZumbiEp01 out/zumbi-ep01.raw.mp4 --gl=angle && bash scripts/mux-audio.sh out/zumbi-ep01.raw.mp4 public/series/zumbi/ep01-narracao.mp3 out/zumbi-ep01.mp4",
     "still": "remotion still GeladeiraExplainer out/preview.png --frame=90 --gl=angle",
+    "still:zumbi-01": "remotion still ZumbiEp01 out/zumbi-ep01-preview.png --frame=400 --gl=angle",
     "stills": "node scripts/export-stills.mjs"
   },
   "dependencies": {
