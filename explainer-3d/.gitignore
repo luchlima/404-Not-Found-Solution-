@@ -4,3 +4,4 @@ dist/
 .DS_Store
 *.log
 .remotion/
+public/tts_parts/

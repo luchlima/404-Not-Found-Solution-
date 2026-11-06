@@ -1,16 +1,12 @@
 import React from "react";
-import { AbsoluteFill, Sequence } from "remotion";
-// import { Audio, staticFile } from "remotion";
+import { AbsoluteFill, Audio, Sequence, staticFile } from "remotion";
 import { BrandBar } from "./components/BrandBar";
 import { Caption } from "./components/Caption";
 import { FridgeScene } from "./scenes/FridgeScene";
 
 /**
  * Composição principal no estilo Desmontando o Mundo.
- *
- * Para ativar narração:
- *   1. Coloque public/narracao.wav
- *   2. Descomente o import e o <Audio /> abaixo
+ * Narração: public/narracao.mp3 (gTTS, sincronizada com BEATS).
  */
 export const GeladeiraExplainer: React.FC = () => {
   return (
@@ -19,7 +15,7 @@ export const GeladeiraExplainer: React.FC = () => {
         <FridgeScene />
       </Sequence>
 
-      {/* <Audio src={staticFile("narracao.wav")} /> */}
+      <Audio src={staticFile("narracao.mp3")} />
 
       <BrandBar />
       <Caption />
